@@ -1,0 +1,16 @@
+PODS:
+  - AppsFlyerFramework (4.10.3)
+
+DEPENDENCIES:
+  - AppsFlyerFramework
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AppsFlyerFramework
+
+SPEC CHECKSUMS:
+  AppsFlyerFramework: fbc34d43d02342afb1b77a5d87ab0a9e27138267
+
+PODFILE CHECKSUM: 1530290dc95b6ddab0ddccd34e777f7537b6dbeb
+
+COCOAPODS: 1.6.2
