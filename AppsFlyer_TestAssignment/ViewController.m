@@ -14,10 +14,14 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
+  _myFirstObjCString = @"This is my first Obj-C written app with AppFlyer SDK implemented, so, Hello, world!";
 }
 
 
+- (IBAction)pressMeButtonPressed:(id)sender {
+  _label.text = [NSString stringWithFormat: @"%@", _myFirstObjCString];
+}
 @end

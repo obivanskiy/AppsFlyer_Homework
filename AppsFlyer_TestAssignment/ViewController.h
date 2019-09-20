@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property NSString *myFirstObjCString; 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIButton *pressMeButton;
 
+- (IBAction)pressMeButtonPressed:(UIButton *)sender;
 
 @end
 
