@@ -16,15 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKN-bC-NQI">
-                                <rect key="frame" x="173" y="295.66666666666669" width="68" height="30"/>
-                                <state key="normal" title="Press me!"/>
-                                <connections>
-                                    <action selector="pressMeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3mz-9X-9Iq"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMq-f6-eW1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMq-f6-eW1">
                                 <rect key="frame" x="20" y="285.66666666666669" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-re-LnZ">
+                                <rect key="frame" x="20" y="293.66666666666669" width="374" height="62.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKD-8F-uPo">
+                                <rect key="frame" x="20" y="364" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,23 +37,30 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9SB-re-LnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Zp-Hd-bCA"/>
                             <constraint firstItem="wMq-f6-eW1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9HX-Cn-hFe"/>
-                            <constraint firstItem="CKN-bC-NQI" firstAttribute="top" secondItem="wMq-f6-eW1" secondAttribute="bottom" constant="10" id="C0K-R8-rhq"/>
+                            <constraint firstItem="9SB-re-LnZ" firstAttribute="top" secondItem="wMq-f6-eW1" secondAttribute="bottom" constant="8" id="APu-FV-HDk"/>
                             <constraint firstItem="wMq-f6-eW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IAJ-aW-hDX"/>
-                            <constraint firstItem="CKN-bC-NQI" firstAttribute="centerX" secondItem="wMq-f6-eW1" secondAttribute="centerX" id="hwf-JY-ARm"/>
+                            <constraint firstItem="9SB-re-LnZ" firstAttribute="centerX" secondItem="wMq-f6-eW1" secondAttribute="centerX" id="JzI-zm-NVV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yKD-8F-uPo" secondAttribute="bottom" constant="372" id="NJX-eB-hva"/>
+                            <constraint firstItem="yKD-8F-uPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V77-eF-lon"/>
+                            <constraint firstItem="yKD-8F-uPo" firstAttribute="top" secondItem="9SB-re-LnZ" secondAttribute="bottom" constant="8" id="bnv-Rh-94L"/>
+                            <constraint firstItem="wMq-f6-eW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="285.66666666666669" id="lfP-6D-Hfx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9SB-re-LnZ" secondAttribute="trailing" constant="20" id="mJQ-nx-Jw0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wMq-f6-eW1" secondAttribute="trailing" constant="20" id="pok-65-Hcx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CKN-bC-NQI" secondAttribute="bottom" constant="410.5" id="x0Q-q1-mgW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yKD-8F-uPo" secondAttribute="trailing" constant="20" id="xKD-F7-05q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="wMq-f6-eW1" id="aIc-Wc-Orz"/>
-                        <outlet property="pressMeButton" destination="CKN-bC-NQI" id="9Cz-I9-J2d"/>
+                        <outlet property="afMessageLabel" destination="9SB-re-LnZ" id="hyt-bU-BBK"/>
+                        <outlet property="afStatusLabel" destination="wMq-f6-eW1" id="aIc-Wc-Orz"/>
+                        <outlet property="isFirstLaunchLable" destination="yKD-8F-uPo" id="05C-Yv-FGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59.420289855072468" y="91.741071428571431"/>
+            <point key="canvasLocation" x="-59.420289855072468" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>

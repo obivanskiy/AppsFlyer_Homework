@@ -17,11 +17,20 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _myFirstObjCString = @"This is my first Obj-C written app with AppFlyer SDK implemented, so, Hello, world!";
+  [AppsFlyerTracker sharedTracker].delegate = self;
 }
 
-
-- (IBAction)pressMeButtonPressed:(id)sender {
-  _label.text = [NSString stringWithFormat: @"%@", _myFirstObjCString];
+- (void)onConversionDataReceived:(NSDictionary *)installData {
+  self.convertionData = installData;
+  self.afStatusLabel.text = [NSString stringWithFormat: @"%@ %@", @"Status: ", installData[@"af_status"]];
+  self.afMessageLabel.text = [NSString stringWithFormat: @"%@ %@", @"Message: ", installData[@"af_message"]];
+;
+  
+  if (installData[@"is_first_launch"] == 0) {
+    self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: false"];
+  } else {
+    self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: true"];
+  }
 }
+
 @end

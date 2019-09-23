@@ -29,10 +29,6 @@
   return YES;
 }
 
-- (void)onConversionDataReceived:(NSDictionary *)installData {
-  
-}
-
 - (void)onAppOpenAttribution:(NSDictionary *)attributionData {
 
 }

@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AppsFlyerLib/AppsFlyerTracker.h>
 
-@interface ViewController : UIViewController
-@property NSString *myFirstObjCString; 
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UIButton *pressMeButton;
+@interface ViewController : UIViewController <AppsFlyerTrackerDelegate>
 
-- (IBAction)pressMeButtonPressed:(UIButton *)sender;
+@property NSDictionary *convertionData;
+@property (weak, nonatomic) IBOutlet UILabel *afStatusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *afMessageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isFirstLaunchLable;
+
 
 @end
 

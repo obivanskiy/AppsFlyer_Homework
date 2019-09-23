@@ -11,7 +11,6 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, AppsFlyerTrackerDelegate>
 
-
 @property (strong, nonatomic) UIWindow *window;
 
 
