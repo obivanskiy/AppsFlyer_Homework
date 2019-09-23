@@ -11,11 +11,11 @@
 
 @interface ViewController : UIViewController <AppsFlyerTrackerDelegate>
 
-@property NSDictionary *convertionData;
 @property (weak, nonatomic) IBOutlet UILabel *afStatusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *afMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *isFirstLaunchLable;
 
+- (void)setConversionData:(NSDictionary *)data;
 
 @end
 

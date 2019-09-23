@@ -21,16 +21,24 @@
 }
 
 - (void)onConversionDataReceived:(NSDictionary *)installData {
-  self.convertionData = installData;
-  self.afStatusLabel.text = [NSString stringWithFormat: @"%@ %@", @"Status: ", installData[@"af_status"]];
-  self.afMessageLabel.text = [NSString stringWithFormat: @"%@ %@", @"Message: ", installData[@"af_message"]];
-;
-  
-  if (installData[@"is_first_launch"] == 0) {
-    self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: false"];
-  } else {
-    self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: true"];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self setConversionData:installData];
+  });
+}
+
+
+- (void)setConversionData:(NSDictionary *)data {
+  if (data != nil) {
+    self.afStatusLabel.text = [NSString stringWithFormat: @"%@ %@", @"Status: ", data[@"af_status"]];
+    self.afMessageLabel.text = [NSString stringWithFormat: @"%@ %@", @"Message: ", data[@"af_message"]];
+    
+    if (data[@"is_first_launch"] == 0) {
+      self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: false"];
+    } else {
+      self.isFirstLaunchLable.text =  [NSString stringWithFormat: @"%@", @"Message: true"];
+    }
   }
 }
+
 
 @end
