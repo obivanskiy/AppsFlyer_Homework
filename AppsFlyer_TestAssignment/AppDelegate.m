@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AppsFlyerLib/AppsFlyerTracker.h>
+#import "ViewController.h"
 
 
 @interface AppDelegate ()
@@ -25,12 +26,27 @@
   [AppsFlyerTracker sharedTracker].delegate = self;
   [AppsFlyerTracker sharedTracker].isDebug = true;
   
+  self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+  
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+  
+  UIViewController *viewController = [storyboard instantiateInitialViewController];
+  
+  self.window.rootViewController = viewController;
+  [self.window makeKeyAndVisible];
+
+  self.delegate = viewController;
+  
   
   return YES;
 }
 
-- (void)onAppOpenAttribution:(NSDictionary *)attributionData {
+- (void)onConversionDataReceived:(NSDictionary *)installData {
+  [_delegate getConversionData:installData];
+}
 
+- (void)onAppOpenAttribution:(NSDictionary *)attributionData {
+  
 }
 
 - (void)onConversionDataRequestFailure:(NSError *)error {

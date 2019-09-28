@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AppsFlyerLib/AppsFlyerTracker.h>
 
-@interface ViewController : UIViewController <AppsFlyerTrackerDelegate>
+
+
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *afStatusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *afMessageLabel;

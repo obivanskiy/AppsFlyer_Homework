@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
-@interface ViewController ()
+@interface ViewController () <ConversionDataDelegate>
 
 @end
 
@@ -17,12 +18,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [AppsFlyerTracker sharedTracker].delegate = self;
 }
 
-- (void)onConversionDataReceived:(NSDictionary *)installData {
+- (void)getConversionData:(NSDictionary *)data {
   dispatch_async(dispatch_get_main_queue(), ^{
-    [self setConversionData:installData];
+    [self setConversionData:data];
   });
 }
 
