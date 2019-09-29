@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <AppsFlyerLib/AppsFlyerTracker.h>
-#import "ViewController.h"
+
 
 
 @interface AppDelegate ()
